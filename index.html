@@ -4,52 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shrishti ♥ Shivam</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background: linear-gradient(135deg, #f7c6c7, #fde2b4);
-            font-family: 'Arial', sans-serif;
-            color: #333;
-        }
-        .countdown-container {
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            padding: 30px 40px;
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-        .title {
-            font-size: 2em;
-            color: #3498db;
-            margin-bottom: 20px;
-            font-weight: bold;
-        }
-        .timer {
-            display: flex;
-            justify-content: space-around;
-            font-size: 1.8em;
-            color: #2c3e50;
-        }
-        .time-box {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .time-box span {
-            font-size: 0.8em;
-            color: #7f8c8d;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
+    <div id="particles-js"></div>
     <div class="countdown-container">
-        <div class="title" id="countdown-title">X Days to go</div>
+        <div class="title" id="countdown-title">X Days to go!</div>
         <div class="timer">
             <div class="time-box">
                 <div id="hours">00</div>
@@ -65,35 +26,7 @@
             </div>
         </div>
     </div>
+    <script src="./script.js"></script>
 
-    <script>
-        const targetDate = new Date('2025-02-04T00:00:00');  // Change this to your target date
-
-        function updateCountdown() {
-            const now = new Date();
-            const timeDifference = targetDate - now;
-
-            if (timeDifference <= 0) {
-                document.getElementById("countdown-title").textContent = "The time has come!";
-                document.getElementById("hours").textContent = "00";
-                document.getElementById("minutes").textContent = "00";
-                document.getElementById("seconds").textContent = "00";
-                return;
-            }
-
-            const daysLeft = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-            document.getElementById("countdown-title").textContent = `${daysLeft} Days to go`;
-            document.getElementById("hours").textContent = hours.toString().padStart(2, '0');
-            document.getElementById("minutes").textContent = minutes.toString().padStart(2, '0');
-            document.getElementById("seconds").textContent = seconds.toString().padStart(2, '0');
-        }
-
-        setInterval(updateCountdown, 1000);
-        updateCountdown();
-    </script>
 </body>
 </html>
