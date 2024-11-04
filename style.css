@@ -1,0 +1,53 @@
+/* Import Google Fonts for a more elegant look */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+/* Body styling with gradient background */
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    justify-content: flex-start; /* Align content to the left */
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #1f85b0, #926aff); /* Soft pink to light orange gradient */
+    padding-left: 50px; /* Add padding to shift content from the left */
+}
+
+#particles-js{
+    height: 100%;
+}
+
+/* Countdown container styling */
+.countdown-container {
+    background: none; /* Remove background for no card effect */
+    position: absolute;
+    padding: 0;
+    text-align: left;
+}
+
+/* Title styling with a fancy font */
+.title {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 3em;
+    color: #ffffff; /* Darker orange for contrast */
+    margin-bottom: 20px;
+}
+
+/* Timer styling */
+.timer {
+    display: flex;
+    font-size: 1.8em;
+    color: #ffffff; /* Navy blue for contrast */
+}
+
+.time-box {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin-right: 15px; /* Space out the time boxes */
+}
+
+.time-box span {
+    font-size: 0.8em;
+    color: #ffffff;
+}

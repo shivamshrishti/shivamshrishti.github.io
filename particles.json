@@ -1,0 +1,26 @@
+{
+    "particles":{
+      "number":{
+        "value":120
+      },
+      "color":{
+        "value":"#fff"
+      },
+  
+      "size":{
+        "value":2,
+        "random": true,
+        "anim":{
+          "enable":false
+        }
+      }
+    },
+    "interactivity":{
+      "events":{
+        "onclick":{
+          "enable":true,
+          "mode":"repulse"
+        }
+      }
+    }
+  }
